@@ -1,0 +1,18 @@
+{
+  "nivel_1": {
+    "musica": "musica-juego.mp3",
+    "fondo": "escenario.jpg",
+    "items": [
+      "pregunta"
+    ]
+  },
+  "nivel_2": {
+    "musica": "musica-juego.mp3",
+    "fondo": "escenario.jpg",
+    "items": [
+      "carteles",
+      "marco",
+      "pregunta"
+    ]
+  }
+}
