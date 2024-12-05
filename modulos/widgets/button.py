@@ -11,6 +11,7 @@ class Button(Widget):
         self.rect.center = (x, y)
         self.superficie = pantalla
 
+
         self.click_option_sfx = pg.mixer.Sound("assets/snd/click.mp3")
         self.on_click = on_click
         self.on_click_param = on_click_param

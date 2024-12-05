@@ -13,6 +13,7 @@ class Form:
         self.level_num = level_num
         self.music_path = music_path
         self.admin_sonido = Sonido()
+        
 
     def set_active(self, name: str):
         for aux_form in self.forms_dict.values():

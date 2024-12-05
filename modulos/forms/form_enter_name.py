@@ -44,7 +44,7 @@ class FormEnterName(Form):
         self.jugador.set_nombre(self.writing_text.texto)
         print(f'Su nombre: {self.jugador.get_nombre()} - {self.jugador.get_puntaje_total()} puntos')
         grabar_puntaje(self.jugador)
-        self.set_active('form_rankings')
+        self.set_active('form_ranking')
         
     def draw(self)->None:
         '''

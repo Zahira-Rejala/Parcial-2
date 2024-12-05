@@ -22,12 +22,11 @@ from .variables import (
 )
 lista_pregunta = [pregunta_rect_uno, pregunta_rect_dos, pregunta_rect_tres,
     pregunta_rect_cuatro, pregunta_rect_cinco, pregunta_rect_seis, pregunta_rect_siete,
-    pregunta_rect_ocho]
+    ]
 
 
 def mostrar_pregunta(lista_pregunta, pregunta, pantalla):
     for i in range(len(lista_pregunta)):
-#        pg.draw.rect(pantalla, COLOR_ROJO, lista_pregunta[i])
         pantalla.blit(pregunta, lista_pregunta[i])
         
 

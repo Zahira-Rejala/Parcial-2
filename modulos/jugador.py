@@ -1,12 +1,16 @@
 import pygame as pg
-from .auxiliar import achicar_imagen
-from .variables import RUTA_MUJER_PENSANDO
+from .auxiliar import (
+    achicar_imagen, mesa, mesa_rect, pregunta, pregunta_rect_ocho
+    )
+from .variables import (
+    RUTA_MUJER_PENSANDO, coordenada_mujer_pensando
+    )
 
 class Jugador:
 
     __instanciado = None
 
-    def  __init__(self, nombre: str = "Jugador 1", pos_x: int = 0, pos_y: int = 0):
+    def  __init__(self, nombre: str = "Jugador 1", pos_x: int = coordenada_mujer_pensando[0], pos_y: int = coordenada_mujer_pensando[1]):
 
         if Jugador.__instanciado is None:
             Jugador.__instanciado = self
@@ -31,6 +35,7 @@ class Jugador:
 
     def get_nombre(self):
         return self.nombre
+
     
     def set_nombre(self, nombre: str):
         self.nombre = nombre
@@ -58,6 +63,9 @@ class Jugador:
 
     def draw(self, screen):
         screen.blit(self.imagen, self.rect)
+        screen.blit(mesa, mesa_rect)
+        screen.blit(pregunta, pregunta_rect_ocho)
+
     
     def update(self, lista_eventos):
         self.events(lista_eventos)

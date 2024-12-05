@@ -28,6 +28,8 @@ SONIDO_RANKING = "./assets/snd/musica-menu.mp3"
 SONIDO_OPCIONES = "./assets/snd/musica-menu.mp3"
 SONIDO_MENU = "./assets/snd/musica-menu.mp3"
 
+FPS = 60
+
 COLOR_AZUL = (0, 0, 255)
 COLOR_ROJO = (255, 0, 0)
 COLOR_ROJO_CLARO = (255, 146, 137)
@@ -59,7 +61,9 @@ coordenadas_boton_azul = [1030, 970]
 coordenadas_panel_preguntas = [785, 620]
 coordenada_cuadrado_rojo = [650, 730]
 coordenada_cuadrado_azul = [970, 730]
-coordenada_prefieres = [800, 670]
+coordenada_prefieres = [830, 670]
+coordenada_respuesta_uno = [690, 830]
+coordenada_respuesta_dos = [990, 830]
 
 
 

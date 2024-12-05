@@ -81,8 +81,11 @@ reload_pista_rect = pg.Rect(coordenada_reload, reload_pista.get_size())
 
 boton_rojo = achicar_imagen(RUTA_BOTON_ROJO, 4)
 boton_rojo_rect = pg.Rect(coordenadas_boton_rojo, boton_rojo.get_size())
+boton_rojo_dict = crear_diccionario_item(boton_rojo, boton_rojo_rect)
 boton_azul = achicar_imagen(RUTA_BOTON_AZUL,3.5)
 boton_azul_rect = pg.Rect(coordenadas_boton_azul, boton_azul.get_size())
+boton_azul_dict = crear_diccionario_item(boton_azul, boton_azul_rect)
+
 
 panel_preguntas = achicar_imagen(RUTA_PANEL_PREGUNTAS, 4.5)
 panel_preguntas_rect = pg.Rect(coordenadas_panel_preguntas, panel_preguntas.get_size())
@@ -133,4 +136,4 @@ fondo = pg.transform.scale(fondo_raw, (1920, 1200))
 
 fuente_titulo = pg.font.Font("./assets/fonts/BungeeTint-Regular.ttf", 70) 
 fuente_dinero = pg.font.Font("./assets/fonts/pixeldown.ttf", 30)
-fuente_preguntas = pg.font.Font("./assets/fonts/Modak-Regular.ttf", 35)
+fuente_preguntas = pg.font.Font("./assets/fonts/Mandala Christmas.otf", 50)

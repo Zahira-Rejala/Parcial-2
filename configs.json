@@ -3,7 +3,13 @@
     "musica": "musica-juego.mp3",
     "fondo": "escenario.jpg",
     "items": [
-      "pregunta"
+      "boton_rojo",
+      "boton_azul"
+    ],
+    "id": 1,
+    "answer": [
+      "Viajar al pasado",
+      " Viajar al futuro"
     ]
   },
   "nivel_2": {

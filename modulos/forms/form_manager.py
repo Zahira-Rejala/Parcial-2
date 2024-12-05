@@ -9,6 +9,8 @@ from .form_pause import FormPause
 from .form_enter_name import FormEnterName
 from ..jugador import Jugador
 
+from .form_juego import FormJuego
+
 
 
 
@@ -29,6 +31,7 @@ class FormManager:
             FormPause(name="form_pause", pantalla=self.main_screen, x=0, y=0, active=True, level_num=self.current_level, music_name=SONIDO_MENU),
             FormEnterName(name="form_enter_name",pantalla=self.main_screen,x=0,y=0,active=True,level_num=1,music_name=SONIDO_MENU,score=0),
 
+            FormJuego(name="form_juego",pantalla=self.main_screen,x=0,y=0,active=True,level_num=1, music_path=SONIDO_MUSIC)
         ]
 
 #Cuando el usuario aprete ESC va al formulario pausa
@@ -56,12 +59,32 @@ class FormManager:
             self.forms[3].update()
             self.forms[3].draw()
             if self.forms[3].level_restart:
-                #reinicia el nivel
                 pass
+                #reinicia el nivel
+                # self.forms[5].restart_level()
+                # self.forms[3].level_restart = False
+
+
+
+        elif self.forms[3].level_restart:
+            self.forms[5].restart_level()
+            self.forms[3].level_restart = False
+            self.forms[5] = FormJuego(name="form_juego", pantalla=self.main_screen, x=0, y=0, active=True, level_num=1, music_path= SONIDO_MUSIC)
+            self.forms[5].set_active("form_juego")
 
         elif self.forms[4].active:
             self.forms[4].update(event_list)
             self.forms[4].draw()
+
+        elif(self.forms[4].active):
+            self.forms[4].score = self.jugador_actual.get_puntaje_total()
+            self.forms[4].update(event_list)
+            self.forms[4].draw()
+
+        elif(self.forms[5].active):
+            self.forms[5].update()
+            self.forms[5].draw()
+            self.forms[5].level_advance()
 
     def update(self, event_list: list):
         self.keys_update(event_list)

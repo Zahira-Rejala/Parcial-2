@@ -21,8 +21,9 @@ class FormPause(Form):
         self.menu_ppal_title = TextTitle(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2-300,texto="THIS or THAT",pantalla=pantalla,font_size=85)
         self.menu_ppal_subtitle = TextTitle(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2-150,texto="PAUSA",pantalla=pantalla,font_size=70)
 
-        self.button_resume = Button(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2-70,texto="VOLVER AL NIVEL",pantalla=pantalla,on_click=self.click_resume,on_click_param="form_start_level")
-        self.button_restart = Button(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2+10,texto="REINICIAR NIVEL",pantalla=pantalla,on_click=self.click_restart,on_click_param="form_start_level")
+        self.button_resume = Button(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2-70,texto="VOLVER AL NIVEL",pantalla=pantalla,on_click=self.click_resume,on_click_param="form_juego")
+        self.button_restart = Button(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2+10,texto="REINICIAR NIVEL",pantalla=pantalla,on_click=self.click_restart,on_click_param="form_juego")
+        
         self.button_music = Button(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2+80,texto="MUSICA: ON/OFF",pantalla=pantalla,on_click=self.click_music)
         self.button_return_menu = Button(x=DIMENSION_PANTALLA[0]//2,y=DIMENSION_PANTALLA[1]//2+150,texto="VOLVER AL MENU",pantalla=pantalla,on_click=self.click_return_menu,on_click_param="form_main_menu")
 

@@ -22,7 +22,7 @@ class FormMainMenu(Form):
         self.menu_ppal_title = TextTitle(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]-1000, texto= "THIS or THAT", pantalla=pantalla, font_size=150)
         self.menu_ppal_subtitle = TextTitle(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]-800, texto= "MENU PRINCIPAL", pantalla=pantalla, font_size=100)
 
-        self.button_start = Button(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]//2+40, texto= "COMENZAR", pantalla=pantalla,font_size=50, on_click=self.click_start, on_click_param="form_enter_name")
+        self.button_start = Button(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]//2+40, texto= "COMENZAR", pantalla=pantalla,font_size=50, on_click=self.click_start, on_click_param="form_juego")
         self.button_options = Button(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]//2+140, texto= "OPCIONES", pantalla=pantalla,font_size=50, on_click=self.click_option, on_click_param="form_options")
         self.button_rankings = Button(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]//2+240, texto= "RANKINGS", pantalla=pantalla,font_size=50 ,on_click=self.click_ranking, on_click_param="form_rankings")
         self.button_exit = Button(x= DIMENSION_PANTALLA[0]//2, y= DIMENSION_PANTALLA[1]//2+340, texto= "SALIR", pantalla=pantalla,font_size=50, on_click=self.click_exit)
